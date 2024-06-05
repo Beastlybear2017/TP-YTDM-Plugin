@@ -113,9 +113,11 @@ class YTMD:
         raise Exception(f"Failed to obtain metadata: {response.text}")
 
     def get_state(self):
+        self._check_token()
         return self.session.get(self.url + "/state")
     
     def get_playlists(self):
+        self._check_token()
         return self.session.get(self.url + "/playlists")
     
     def toggle_playback(self):
