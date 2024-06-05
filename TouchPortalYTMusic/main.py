@@ -18,7 +18,7 @@ def on_error(data):
 
 def on_state_update(data):
     parser = Parser(data)
-    print("Player: " + str(parser.player_state))
+    # print("Player: " + str(parser.player_state))
     # print("Player State: " + parser.player_state.state)
     # print("Player video progress: " + str(parser.player_state.video_progress))
     # print("Player volume: " + str(parser.player_state.volume))
@@ -29,7 +29,7 @@ def on_state_update(data):
     # print("Player is infinite: " + str(parser.player_state.isInfinite))
     # print("Player repeat mode: " + parser.player_state.repeatMode)
     # print("Player selected item index: " + str(parser.player_state.selectedItemIndex))
-    # print("Player queue: " + str(parser.player_state.queue))
+    print("Player queue: " + str(parser.player_state.queue))
 
 ytmd.register_event(Events.connect, on_connect)
 ytmd.register_event(Events.disconnect, on_disconnect)
