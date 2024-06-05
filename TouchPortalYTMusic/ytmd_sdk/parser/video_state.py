@@ -3,14 +3,23 @@ from .thumbnail import Thumbnail
 
 class VideoState(object):
     author: str = ""
+    """author"""
     channel_id: str = ""
+    """channel id"""
     title: str = ""
+    """title"""
     album: str = ""
+    """album"""
     album_id: str = ""
+    """album id"""
     like_status: int = 0
+    """like status"""
     thumbnails: list[Thumbnail] = []
+    """thumbnails"""
     duration_seconds: int = 0
+    """duration seconds"""
     id: str = ""
+    """id"""
 
     def __init__(self, data) -> None:
         self.author = data.get("author", "")
